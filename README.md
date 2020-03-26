@@ -30,3 +30,20 @@ begin
 end;
 
 ```
+
+
+example xxx.php :
+```
+<?php
+
+header('Content-Type: text/html; charset=utf-8');
+
+if (isset($_REQUEST["request"])) 
+	if ($_REQUEST["request"] == "1234567890") {
+		header("Status: 200");
+		echo 'OK';
+	} else {
+		http_response_code(400);
+		echo "ERROR";
+	}	
+```
